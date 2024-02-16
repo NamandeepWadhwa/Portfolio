@@ -6,16 +6,16 @@ import Link from 'next/link';
 
 
 
-export default function Naman() {
+export default function Navigation() {
   return (
     <>
     <Navbar expand="md" >
       <Container>
         <Link href="/" style={{ textDecoration: 'none' }}>
-        <Navbar.Brand class="text-dark"  >
+        <Navbar.Brand className="text-dark"  >
         <h4> 
       
-        <Image src="/Logo.jpeg" alt="Namandeep Singh" width="50" height="50" class="rounded-circle border border-dark" /> &nbsp;
+        <Image src="/Logo.jpeg" alt="Namandeep Singh" width="50" height="50" className="rounded-circle border border-dark" /> &nbsp;
             
           Namandeep Singh</h4></Navbar.Brand>
             </Link>
@@ -23,9 +23,10 @@ export default function Naman() {
         <Navbar.Collapse id="bar-nav">
       
         <Nav className="ms-auto">
-          <Nav.Link href="/"  class=" text-decoration-none text-dark m-3" ><h4>Home </h4> </Nav.Link>
-          <Nav.Link href="#" class=" text-decoration-none text-dark m-3" ><h4>Projects</h4></Nav.Link>
-          <Nav.Link href="#" class=" text-decoration-none text-dark m-3" ><h4>Contact</h4></Nav.Link>
+          <Nav.Link href="/"  className=" text-decoration-none text-dark m-3" ><h4>Home </h4> </Nav.Link>
+         
+          <Nav.Link href="#" className=" text-decoration-none text-dark m-3" ><h4>Contact</h4></Nav.Link>
+          <Nav.Link href="#" className=" text-decoration-none text-dark m-3" ><h4>Admin login</h4></Nav.Link>
         </Nav>
        </Navbar.Collapse>
       
