@@ -3,9 +3,27 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import BasicExample from '@/components/Project';
+import {getAll} from '@/lib/mongodb';
+
 
 
 export default function Home(props) {
+
+   const buttonClicked= async (e) => {
+    e.preventDefault();
+  
+    try{
+    const res=await getAll();
+    const data=await res.json();
+    console.log(data);
+    
+    }
+    catch(err){
+      console.log(err);
+    }
+   
+
+  }
   return (
     <>
    
@@ -27,7 +45,7 @@ export default function Home(props) {
             </Row>
        
         </Col>
-        <Col Col md={6} className=" my-5">
+        <Col md={6} className=" my-5">
           <h1>About me</h1>
           <h4><p>
             I am Namandeep Singh Wadhwa, currently pursuing an Advanced Diploma in Computer Programming and Analysis at Seneca College. My academic journey has ignited a passion for both web development and software development. I am dedicated to continuously refining my skills in these areas. Proficient in the MERN stack and Next.js, I also have experience in JavaScript (ES6), C++, and OPEN MP for parallel programming.
@@ -36,7 +54,7 @@ export default function Home(props) {
         
         </Col>
       </Row>
-  
+     <Button onClick={buttonClicked}></Button>
     
    </>
   );
