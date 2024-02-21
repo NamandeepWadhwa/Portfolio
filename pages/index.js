@@ -2,28 +2,17 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
-import BasicExample from '@/components/Project';
-import {getAll} from '@/lib/mongodb';
+import Project from '@/components/Project';
+import  {projects} from '@/project';
+import {useAtom} from 'jotai';
+import { useEffect } from 'react';
 
 
 
 export default function Home(props) {
+  const [projectList, setProjectList] = useAtom(projects);
 
-   const buttonClicked= async (e) => {
-    e.preventDefault();
-  
-    try{
-    const res=await getAll();
-    const data=await res.json();
-    console.log(data);
-    
-    }
-    catch(err){
-      console.log(err);
-    }
-   
 
-  }
   return (
     <>
    
@@ -54,7 +43,22 @@ export default function Home(props) {
         
         </Col>
       </Row>
-     <Button onClick={buttonClicked}></Button>
+      <Row className=""> 
+      <Col xs={12}className="d-flex justify-content-center">
+      <h1>Projects</h1>
+        </Col>
+      </Row>
+      <Row>
+        {
+          projectList.map((project, index) => {
+            return (
+              <Col md={4} key={index}>
+                <Project project={project} />
+              </Col>
+            );
+          })
+        }
+      </Row>
     
    </>
   );

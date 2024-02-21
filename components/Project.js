@@ -1,20 +1,18 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function BasicExample() {
+export function Project(Project) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="linkedinlogo.png"  />
+      <Card.Img variant="top" src={Project.imgURL}  />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{Project.title}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+         {Project.description}
         </Card.Text>
-        <Button variant="dark">More deatils</Button>
+        <Button variant="dark">Github{Project.links}</Button>
       </Card.Body>
     </Card>
   );
 }
 
-export default BasicExample;
