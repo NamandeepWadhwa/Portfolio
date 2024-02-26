@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Project from '@/components/Project';
 import  {projects} from '@/project';
 import {useAtom} from 'jotai';
-import { useEffect } from 'react';
+
 
 
 
@@ -43,21 +43,23 @@ export default function Home(props) {
         
         </Col>
       </Row>
-      <Row className=""> 
+      <Row > 
       <Col xs={12}className="d-flex justify-content-center">
       <h1>Projects</h1>
         </Col>
       </Row>
       <Row>
-        {
-          projectList.map((project, index) => {
-            return (
-              <Col md={4} key={index}>
-                <Project project={project} />
-              </Col>
-            );
-          })
-        }
+       {
+        projectList.Length > 0 ? projectList.map((project, index) => {
+         
+            <Col md={4} key={index} className="my-3">
+              <Project project={project} />
+            </Col>
+          
+        }): (null)  
+      
+      }
+        
       </Row>
     
    </>

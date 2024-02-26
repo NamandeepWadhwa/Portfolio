@@ -26,7 +26,7 @@ export default function Navigation() {
           <Nav.Link href="/"  className=" text-decoration-none text-dark m-3" ><h4>Home </h4> </Nav.Link>
          
           <Nav.Link href="#" className=" text-decoration-none text-dark m-3" ><h4>Contact</h4></Nav.Link>
-          <Nav.Link href="#" className=" text-decoration-none text-dark m-3" ><h4>Admin login</h4></Nav.Link>
+          <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3" ><h4>Admin login</h4></Nav.Link>
         </Nav>
        </Navbar.Collapse>
       

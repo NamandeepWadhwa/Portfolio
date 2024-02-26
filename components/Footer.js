@@ -7,9 +7,9 @@ import Image from 'next/image';
 function Footer() {
   return (
 
-    <Card className="text-center">
+    <Card className="text-center ">
      
-      <Card.Body>
+      <Card.Body className="border border-0">
         <Card.Title>Links</Card.Title>
         <h5>
         <Card.Text>
