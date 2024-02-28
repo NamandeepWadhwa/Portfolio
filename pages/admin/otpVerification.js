@@ -41,9 +41,9 @@ const otpVerificatoin=async(e)=>{
     </Col>
     </Row> 
     <Col xs={12} className="d-flex justify-content-center">
-    <input type="text" value={otpUser}id="otp" onChange={(e)=>setOtpUser(e.target.value)} className=" my-3"></input></Col> 
+    <input type="text" value={otpUser}id="otp" onChange={(e)=>setOtpUser(e.target.value)} className="rounded my-3"></input></Col> 
     <Col xs={12} className="d-flex justify-content-center">
-      <button onClick={otpVerificatoin} className="dark">Verify Otp</button>
+      <button onClick={otpVerificatoin} className="btn btn-dark">Verify Otp</button>
     </Col>
   
   </>
