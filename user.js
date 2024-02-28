@@ -5,3 +5,4 @@ export const user=atom({
     password:''
 });
 export const otp=atom("");
+export const jwtToken=atom("");

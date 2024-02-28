@@ -1,16 +1,17 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {user,otp} from '@/user'
-import {useAtom} from 'jotai';;
+import {user} from '@/user'
+import {useAtom} from 'jotai';
 import { useRouter } from 'next/router';
-import { set } from 'mongoose';
+import {sendEmail} from '@/lib/email';
+import {checkUser} from '@/lib/user';
+import {getOtp} from '@/lib/otp';
 
 
 
 export default function AdminRegister(){
   const Router = useRouter();
   const[newUser, setNewUser]=useAtom(user);
-  const [newOtp, setNewOtp]=useAtom(otp);
   async function adminRegister(e){
 
     e.preventDefault();
@@ -19,41 +20,30 @@ export default function AdminRegister(){
       
     }
     else{
-      const user=await fetch(process.env.NEXT_PUBLIC_SERVER+'/api/users/'+newUser.userName,{
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-      })
-      const existingUser=await user.json();
-      if(existingUser.length>0){
+      const existingUser=await checkUser(newUser);
+      
+      if(existingUser){
         alert('User already exists');
        
       Router.push('/admin/');
       }
       else{
-    const res= await fetch(process.env.NEXT_PUBLIC_SERVER+'/api/getOtp/'+newUser.userName,{
-      method: 'GET',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-     
-    })
-    const data=await res.json();
-    setNewOtp(data.otp);
-    const resEmailOtp= await fetch (process.env.NEXT_PUBLIC_SERVER+'/api/sendEmail',{
-      method: 'PUT',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({from_name:newUser.userName,message:`Otp for registration ${data.otp}`})
-    })
-    if(resEmailOtp.status==200){
-      Router.push('/admin/otpVerification');
-    }
-    else{
-      alert('Error in sending otp');
-    }
+      const data= await getOtp(newUser);
+      if(data){
+        let message="Your OTP is "+data.otp;
+        const mailSend=await sendEmail(newUser.userName,message);
+        if(mailSend){
+          Router.push('/admin/otpVerification');
+        }
+        else{
+          alert('Error in sending otp to mail');
+        }
+      }
+      else{
+        alert('Error in getting otp');
+      }
+   
+    
     
   }
   } 

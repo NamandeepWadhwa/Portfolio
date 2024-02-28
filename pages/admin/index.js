@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import {user} from '@/user'
 import {useAtom} from 'jotai';;
 import { useRouter } from 'next/router';
+import {loginUser} from '@/lib/user';
 
 export default function Admin() {
 const Router = useRouter();
@@ -14,27 +15,19 @@ const [userLogin, setUser]=useAtom(user);
         alert('Please fill all the fields');
       }
       else{
-        try{
-        const res= await fetch(process.env.NEXT_PUBLIC_SERVER+'/api/login',{
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(userLogin)
-        });
-        const data=res.json();
-        if(res.status==200){
-         console.log(data);
+        const login=await loginUser(userLogin);
+        if(login){
+         Router.push('/');
         }
-      }
-      catch(err){
-        console.log(err);
-      }
+        else{
+          alert('Invalid username or password');
+        }
+        
       }
   }
   function routeChange(e){
     e.preventDefault();
-    console.log(Router.push('/admin/adminRegister'));
+    Router.push('/admin/adminRegister');
    
   }
 
