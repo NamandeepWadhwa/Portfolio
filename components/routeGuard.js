@@ -1,7 +1,7 @@
 import { isAuthenticated } from "@/lib/user"
 import {useState,useEffect} from 'react';
 import {useRouter} from 'next/router';
-const PUBLIC_PATHS=['/','/admin','/admin/adminRegister','/_error','/admin/otpVerification']
+const PUBLIC_PATHS=['/','/admin','/_error']
 export default function RouteGuard(props){
   const [authorized,setAuthorized]=useState(false);
   const router=useRouter();

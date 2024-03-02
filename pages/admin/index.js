@@ -33,9 +33,14 @@ const [userLogin, setUser]=useAtom(user);
 
   return (
     <Row className="my-5">
-      <Col xs={12} className="d-flex justify-content-center my-4">
-        <h3>Admin Login</h3>
+      <Col xs={12} className="d-flex justify-content-center my-3">
+        <h3>Admin Login
+       </h3>
+      
       </Col>
+      <Col xs={12} className="d-flex justify-content-center my-2">
+        <h3>Please note that only registered admin can add new admin</h3>
+       </Col>
       <Col xs={12} className="d-flex justify-content-center my-1">
         <form>
           <div className="mb-3">

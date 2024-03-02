@@ -63,7 +63,7 @@ export default function AdminRegister(){
         </Col>
         <Col xs={12} className="d-flex justify-content-center mb-4">
         <br/>
-          <h5>Please not that you will need OTP for registeration which will be send to my mail.<br/> I was learning how to authenticate using email otp so I added this page.</h5>
+          <h5>Register new Admin</h5>
           </Col>
         <Col xs={12} className="d-flex justify-content-center my-1">
           <form>
