@@ -2,16 +2,16 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
-import Project from '@/components/Project';
-import  {projects} from '@/project';
-import {useAtom} from 'jotai';
-
+import {Project} from '@/components/Project';
+import {useState,useEffect} from 'react';
+import { getAllProjects } from '@/lib/project';
+import {projects} from '@/project';
+import { useAtom } from 'jotai';
 
 
 
 export default function Home(props) {
-  const [projectList, setProjectList] = useAtom(projects);
-
+const [projectList,setProjectList]=useAtom(projects);
 
   return (
     <>
@@ -50,11 +50,13 @@ export default function Home(props) {
       </Row>
       <Row>
        {
-        projectList.Length > 0 ? projectList.map((project, index) => {
-         
+        
+        projectList.length> 0 ? projectList.map((project, index) => {
+         return(
             <Col md={4} key={index} className="my-3">
               <Project project={project} />
             </Col>
+         );
           
         }): (null)  
       
