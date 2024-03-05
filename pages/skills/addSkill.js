@@ -6,7 +6,7 @@ import { updateSkill } from "@/lib/skill";
 import { uploadImage } from "@/lib/image";
 
 
-export default function skills() {
+export default function Skills() {
   const {register,handleSubmit}=useForm();
 
   async function submitForm(data){
