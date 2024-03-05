@@ -1,10 +1,9 @@
-import { useEffect,useState } from "react";
 import {useForm} from 'react-hook-form';
-import {uploadImage} from '@/lib/project';
 import { Col } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { addProject } from "@/lib/project";
 import { updateProject } from "@/lib/project";
+import { uploadImage } from "@/lib/image";
 
 
 export default function Projects() {
@@ -21,7 +20,7 @@ export default function Projects() {
     const projectAdded=await addProject(projectData);
     if(projectAdded){
 
-      
+      if(data.image.length>0){
       const imageUrl=await uploadImage(data.image[0]);
     
       if(imageUrl){
@@ -32,15 +31,20 @@ export default function Projects() {
           alert('Project added successfully');
         }
         else{
-          alert("There was an error in uploding image project");
+          alert("There was an error in updating  project");
         }
       }
       else{
-        alert("There was an error in uploding image project");
+        alert("There was an error in uploding project image");
       }
     }
+    }
+  
     else{
       alert("There was an error in adding project");
+    }
+    if(projectAdded){
+      alert('Project added successfully');
     }
 
   }

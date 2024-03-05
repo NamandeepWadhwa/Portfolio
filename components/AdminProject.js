@@ -20,7 +20,7 @@ export function AdminProject(props) {
      
       <td><Image className="img-thumbnail"  style={{ maxWidth: "100px", maxHeight: "100px" }}src={process.env.NEXT_PUBLIC_SERVER + "/api/images/" + props.project.imageUrl} /></td>
       <td><Link href={"/projects/"+props.project._id} className="text-decoration-none text-dark" >Edit</Link></td> 
-      <td><a href="#" className="text-decoration-none text-dark" onClick={remove}>Delet</a></td>
+      <td><a href="#" className="text-decoration-none text-dark" onClick={remove}>Delete</a></td>
       
     </tr>
   );

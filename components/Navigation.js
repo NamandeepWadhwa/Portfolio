@@ -71,8 +71,8 @@ async function contactSubmit(){
          
           <Nav.Link href="#" className=" text-decoration-none text-dark m-3" onClick={(e)=>handleShow()} ><h4>Contact</h4></Nav.Link>
          {!token && <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3" ><h4>Admin login</h4></Nav.Link> }
-         {token && <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3" ><h4>Project</h4></Nav.Link> }
-         {token && <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3" ><h4>Skills</h4></Nav.Link> }
+         {token && <Nav.Link href="/projects" className=" text-decoration-none text-dark m-3" ><h4>Project</h4></Nav.Link> }
+         {token && <Nav.Link href="/skills" className=" text-decoration-none text-dark m-3" ><h4>Skills</h4></Nav.Link> }
          {token && <Nav.Link href="/admin/adminRegister" className=" text-decoration-none text-dark m-3" ><h4>Regiser a Admin</h4></Nav.Link> }
          {token && <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3"  onClick={logout}><h4>Logout</h4></Nav.Link> }
        
@@ -95,7 +95,7 @@ async function contactSubmit(){
         <Modal.Body>
           <label htmlFor="name" className="form-label text-dark">Name</label>
           <input type="text" className="form-control " id="name"  onChange={(e)=>setUserContact({...userContact,name:e.target.value})}
-          value={userContact.message}/>
+          value={userContact.name}/>
           <label htmlFor="email" className="form-label" >Email</label>
           <input type="email" className="form-control" id="email" onChange={(e)=>setUserContact({...userContact,email:e.target.value})} 
           value={userContact.email}/>

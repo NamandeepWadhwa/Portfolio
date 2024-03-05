@@ -1,10 +1,16 @@
 import { projects } from "@/project";
 import { useAtom } from "jotai";
 import { Table } from "react-bootstrap";
+import { Row } from "react-bootstrap";
+import  Link  from 'next/link';
 import  { AdminProject} from "@/components/AdminProject";
 export default function Home(props) {
 const [projectList,setProjectList]=useAtom(projects);
 return (
+  <>
+  <Row className="mb-4">
+    <h3><Link href="/projects/addProject" className="text-decoration-none text-dark"> Add a new project</Link></h3>
+  </Row>
   <Table striped bordered hover size="sm">
   <thead>
     <tr>
@@ -26,6 +32,7 @@ return(
 }): (null)}
   </tbody>
 </Table>
+</>
 );
 
 }

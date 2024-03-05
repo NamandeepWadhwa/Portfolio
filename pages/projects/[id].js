@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import {useForm} from 'react-hook-form';
 import {Row,Col} from 'react-bootstrap';
 import { updateProject } from '@/lib/project';
-import { uploadImage } from '@/lib/project';
+import { uploadImage } from '@/lib/image';
 export default function EditProject(props) {
   const router = useRouter();
   const {id}=router.query;
@@ -37,11 +37,11 @@ export default function EditProject(props) {
           alert('Project updated successfully');
         }
         else{
-          alert("There was an error in uploding image project");
+          alert("There was an error in updaitn project");
         }
       }
       else{
-        alert("There was an error in uploding image project");
+        alert("There was an error in uploding porject skill");
       }
 
     

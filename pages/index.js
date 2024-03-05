@@ -3,15 +3,16 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import {Project} from '@/components/Project';
-import {useState,useEffect} from 'react';
-import { getAllProjects } from '@/lib/project';
+import { skills } from '@/skills';
 import {projects} from '@/project';
 import { useAtom } from 'jotai';
+import {Skill} from '@/components/Skill'
 
 
 
 export default function Home(props) {
 const [projectList,setProjectList]=useAtom(projects);
+const [skillList,setSkillList]=useAtom(skills);
 
   return (
     <>
@@ -25,7 +26,7 @@ const [projectList,setProjectList]=useAtom(projects);
 
         
           <Col md={12}>
-          <a href="/Logo.jpeg" download="Namandeep Singh" className="text-decoration-none">
+          <a href="/Namandeep-Singh-Web-dev-Resume.pdf" download="Namandeep Singh" className="text-decoration-none">
           <Button variant="dark" size="lg" className="rounded mx-auto d-block">
       Resume
       </Button>
@@ -53,7 +54,7 @@ const [projectList,setProjectList]=useAtom(projects);
         
         projectList.length> 0 ? projectList.map((project, index) => {
          return(
-            <Col md={4} key={index} className="my-3">
+            <Col md={3} key={index} className="my-3">
               <Project project={project} />
             </Col>
          );
@@ -63,7 +64,36 @@ const [projectList,setProjectList]=useAtom(projects);
       }
         
       </Row>
-    
+   <Row>
+   <Col xs={12}className="d-flex justify-content-center">
+      <h1>Skills</h1>
+        </Col>
+   </Row>
+   {skillList ? (
+  <>
+    {Object.keys(skillList).map((category, index) => (
+      <div key={index}>
+        <Row className="mt-5 mb-2">
+          <Col xs={12}>
+            <h1>{category}</h1>
+          </Col>
+        </Row>
+        <Row >
+          {skillList[category].map((skill) => (
+            <Col xs={3} key={skill._id}>
+              <Skill skills={skill}></Skill>
+            </Col>
+          ))}
+        </Row>
+      </div>
+    ))}
+  </>
+) : (
+  <h1>Skills loading</h1>
+)}
+
+   
    </>
+
   );
 }
