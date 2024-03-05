@@ -7,8 +7,7 @@ import {useState} from 'react';
 import { readToken,removeToken } from '@/lib/user';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import { sendEmail} from '@/lib/email';
-import { set } from 'mongoose';
+import { sendEmail} from '@/lib/email';;
 
 
 

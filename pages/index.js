@@ -80,7 +80,7 @@ const [skillList,setSkillList]=useAtom(skills);
         </Row>
         <Row >
           {skillList[category].map((skill) => (
-            <Col xs={3} key={skill._id}>
+            <Col md={3} key={skill._id}>
               <Skill skills={skill}></Skill>
             </Col>
           ))}
