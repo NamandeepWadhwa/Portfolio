@@ -7,7 +7,7 @@ import {verifyOtp} from '@/lib/otp';
 import {registerUser} from '@/lib/user';  
 import { useRouter } from 'next/router';
 
-export default function verifyUser(){
+export default function VerifyUser(){
   const Router = useRouter();
 const [newUser, setNewUser]=useAtom(user);
 const [otpUser,setOtpUser]=useState("");
