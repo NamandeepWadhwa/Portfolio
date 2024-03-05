@@ -74,7 +74,7 @@ const [skillList,setSkillList]=useAtom(skills);
     {Object.keys(skillList).map((category, index) => (
       <div key={index}>
         <Row className="mt-5 mb-2">
-          <Col xs={12} className="my-4">
+          <Col xs={12} className="my-4 d-flex justify-content-center">
             <h3>{category}</h3>
           </Col>
         </Row>
