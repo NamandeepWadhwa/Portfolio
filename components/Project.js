@@ -4,8 +4,8 @@ import Image from 'react-bootstrap/Image';
 export function Project(props) {
   
   return (
-    <Card style={{ width: '18rem'}}>
-      <Card.Img variant="top" style={{height:'25vh'}} calssName=" object-fit-cover border rounded" src={process.env.NEXT_PUBLIC_SERVER+"/api/images/"+props.project.imageUrl} />
+    <Card >
+      <Image variant="top" widht="50" height="250" calssName=" object-fit-cover img-fluid" src={process.env.NEXT_PUBLIC_SERVER+"/api/images/"+props.project.imageUrl} />
       <Card.Body>
         <Card.Title>{props.project.title}</Card.Title>
         <Card.Text className="text-dark bg-white">
