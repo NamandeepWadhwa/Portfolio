@@ -38,9 +38,11 @@ const [userLogin, setUser]=useAtom(user);
        </h3>
       
       </Col>
+      <Row>
       <Col xs={12} className="d-flex justify-content-center my-2">
-        <h3>Please note that only registered admin can add new admin</h3>
+        <h3>Please note this page is for admin use only</h3>
        </Col>
+       </Row>
       <Col xs={12} className="d-flex justify-content-center my-1">
         <form>
           <div className="mb-3">

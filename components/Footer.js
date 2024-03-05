@@ -16,11 +16,11 @@ function Footer() {
        Checkout my github and connect with me on linkedin
         </Card.Text>
         </h5>
-        <a href='#'>
+        <a href='https://github.com/NamandeepWadhwa'>
         <Image src="/githublogo.png" alt="Github logo" width={100} height={100} className=" border border-0
           object-fit-contain border rounded" />
         </a>
-        <a href='#'>
+        <a href='https://www.linkedin.com/in/namandeep-singh-wadhwa-044b8a1a9'>
         <Image src="/linkedinlogo.png" alt="Linkedin logo" width={100} height={100} className=" border border-0
           object-fit-contain border rounded" />
         </a>
