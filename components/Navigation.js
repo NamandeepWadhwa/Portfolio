@@ -89,7 +89,7 @@ async function contactSubmit(){
         size="lg"
       >
         <Modal.Header closeButton>
-          <Modal.Title>You can Contact me on naman23156@gmail.com or you can fill the form and I will reach out to you asap</Modal.Title>
+          <Modal.Title>You can reach me at naman23156@gmail.com or you can fill the form and I will reach out to you asap</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <label htmlFor="name" className="form-label text-dark">Name</label>
