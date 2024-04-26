@@ -18,7 +18,7 @@ const [skillList,setSkillList]=useAtom(skills);
     <>
    
       <Row>
-        <Col md={6} className="justify-content-center my-5">
+        <Col md={4} className="justify-content-center my-5">
           
           <Image src="/Logo.jpeg" alt="Namandeep Singh" width="50%" height="50%" className=" rounded mx-auto d-block border border-0
           object-fit-contain border rounded" /><br />
@@ -35,10 +35,10 @@ const [skillList,setSkillList]=useAtom(skills);
             </Row>
        
         </Col>
-        <Col md={6} className=" my-5">
+        <Col md={8} className=" my-5">
           <h1>About me</h1>
           <h4><p>
-            I am Namandeep Singh Wadhwa, currently pursuing an Advanced Diploma in Computer Programming and Analysis at Seneca College. My academic journey has ignited a passion for both web development and software development. I am dedicated to continuously refining my skills in these areas. Proficient in the MERN stack and Next.js, I also have experience in JavaScript (ES6), C++, and OPEN MP for parallel programming.
+          I am Namandeep Singh Wadhwa, currently enrolled in the Advanced Diploma program for Computer Programming and Analysis at Seneca College. My academic journey has fueled a strong passion for web development, and I am dedicated to continuously refining my skills in this domain. Proficient in the MERN stack and Next.js, I also have extensive experience in JavaScript (ES6), C++, SQL, and MongoDB.<br/><br/>Additionally, I am well-versed in essential development tools such as Visual Studio, GitHub, and software fundamentals like data structures and object-oriented programming. My goal is to leverage these skills to contribute effectively to the field of web development.
             </p>
             </h4>
         
