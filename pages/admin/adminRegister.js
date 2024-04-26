@@ -52,7 +52,7 @@ export default function AdminRegister(){
     e.preventDefault();
 
    
-    Route.push('/admin/');
+    Router.push('/admin');
    
   }
   return (
@@ -63,7 +63,7 @@ export default function AdminRegister(){
         </Col>
         <Col xs={12} className="d-flex justify-content-center mb-4">
         <br/>
-          <h5>Register new Admin</h5>
+          <h5>Please be aware that the Register admin functionality will require an opt-in process, where a verification code will be sent to my email. For further details, please feel free to contact me directly. </h5>
           </Col>
         <Col xs={12} className="d-flex justify-content-center my-1">
           <form>
