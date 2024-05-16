@@ -26,7 +26,7 @@ const [skillList,setSkillList]=useAtom(skills);
 
         
           <Col md={12}>
-          <a href="/Namandeep-Singh-Web-dev-Resume.pdf" download="Namandeep Singh" className="text-decoration-none">
+          <a href="/NamandeepSingh_Developer.pdf" download="NamandeepSingh" className="text-decoration-none">
           <Button variant="dark" size="lg" className="rounded mx-auto d-block">
       Resume
       </Button>
@@ -38,7 +38,9 @@ const [skillList,setSkillList]=useAtom(skills);
         <Col md={8} className=" my-5">
           <h1>About me</h1>
           <h4><p>
-          I am Namandeep Singh Wadhwa, currently enrolled in the Advanced Diploma program for Computer Programming and Analysis at Seneca College. My academic journey has fueled a strong passion for web development, and I am dedicated to continuously refining my skills in this domain. Proficient in the MERN stack and Next.js, I also have extensive experience in JavaScript (ES6), C++, SQL, and MongoDB.<br/><br/>Additionally, I am well-versed in essential development tools such as Visual Studio, GitHub, and software fundamentals like data structures and object-oriented programming. My goal is to leverage these skills to contribute effectively to the field of web development.
+          I am Namandeep Singh Wadhwa, currently enrolled in the Advanced Diploma program for Computer Programming and Analysis at Seneca College. Passionate about web development, I specialize in the MERN stack and Next.js, and have strong skills in JavaScript (ES6), C++, SQL, and MongoDB.<br />
+          I am proficient with development tools like Visual Studio and GitHub, and have a solid foundation in data structures and object-oriented programming. My expertise also includes AWS, containerization, CI/CD, and automated testing.<br/><br />
+          To learn more about my experience, download my resume by clicking the Resume button.
             </p>
             </h4>
         
