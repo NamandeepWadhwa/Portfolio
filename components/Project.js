@@ -11,7 +11,7 @@ export function Project(props) {
         <Card.Text className="text-dark bg-white">
           {props.project.description}
         </Card.Text>
-        <Button variant="btn btn-dark" ><a href={props.project.link} className="text-decoration-none text-reset">Git-hub</a></Button>
+        <Button variant="btn btn-dark" ><a href={props.project.link} className="text-decoration-none text-reset">GitHub/LiveLink</a></Button>
       </Card.Body>
     </Card>
   );
