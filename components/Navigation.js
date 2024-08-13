@@ -66,15 +66,16 @@ async function contactSubmit(){
         <Navbar.Collapse id="bar-nav">
       
         <Nav className="ms-auto">
-          <Nav.Link href="/"  className=" text-decoration-none text-dark m-3"  onClick={onLinkClick}><h4>Home </h4> </Nav.Link>
          
-          <Nav.Link href="#" className=" text-decoration-none text-dark m-3" onClick={(e)=>handleShow()} ><h4>Contact</h4></Nav.Link>
-          {!token && <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3" ><h4>Login</h4></Nav.Link> } 
+          <Nav.Link href="/"  className=" text-decoration-none text-dark "  onClick={onLinkClick}><h4>Home </h4> </Nav.Link>
+         
+          <Nav.Link href="#" className=" text-decoration-none text-dark" onClick={(e)=>handleShow()} ><h4>Contact</h4></Nav.Link>
+         
          {token && <Nav.Link href="/projects" className=" text-decoration-none text-dark m-3" ><h4>Project</h4></Nav.Link> }
          {token && <Nav.Link href="/skills" className=" text-decoration-none text-dark m-3" ><h4>Skills</h4></Nav.Link> }
-         {token && <Nav.Link href="/admin/adminRegister" className=" text-decoration-none text-dark m-3" ><h4>Regiser a Admin</h4></Nav.Link> }
+         
          {token && <Nav.Link href="/admin" className=" text-decoration-none text-dark m-3"  onClick={logout}><h4>Logout</h4></Nav.Link> }
-       
+     
 
         </Nav>
        </Navbar.Collapse>

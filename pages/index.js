@@ -49,20 +49,18 @@ const [skillList,setSkillList]=useAtom(skills);
           <h1>About me</h1>
           <h4>
             <p>
-              I am Namandeep Singh Wadhwa, currently enrolled in the Advanced
-              Diploma program for Computer Programming and Analysis at Seneca
-              College. Passionate about web development, I specialize in the
-              MERN stack and Next.js, and have strong skills in JavaScript
-              (ES6), C++, SQL, and MongoDB.
+              Hello, I&apos;am Namandeep Singh Wadhwa, a Computer Programming
+              and Analysis graduate from Seneca College. I specialize in
+              full-stack development with expertise in creating and deploying
+              web applications using Node.js, Express, React, and Next.js.
+              Skilled in implementing secure authentication, integrating
+              databases like MongoDB and PostgreSQL, and utilizing AWS for cloud
+              solutions. I am dedicated to delivering innovative, high-quality
+              software solutions and thriving in dynamic development
+              environments.
               <br />
-              I am proficient with development tools like Visual Studio and
-              GitHub, and have a solid foundation in data structures and
-              object-oriented programming. My expertise also includes AWS,
-              containerization, CI/CD, and automated testing.
-              <br />
-              <br />
-              To learn more about my experience, download my resume by clicking
-              the Resume button.
+              <br /> To learn more about my experience, download my resume by
+              clicking the Resume button.
             </p>
           </h4>
         </Col>
@@ -72,11 +70,11 @@ const [skillList,setSkillList]=useAtom(skills);
           <h1>Projects</h1>
         </Col>
       </Row>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center " style={{overflow:"auto"}}>
         {projectList.length > 0
           ? projectList.map((project, index) => {
               return (
-                <Col md={3} key={index} className="my-3 d-flex">
+                <Col key={index} className="my-3 d-flex">
                   <Project
                     project={project}
                     className="d-flex flex-column h-100"
@@ -100,7 +98,7 @@ const [skillList,setSkillList]=useAtom(skills);
                   <h3>{category}</h3>
                 </Col>
               </Row>
-              <Row>
+              <Row className="justify-content-center">
                 {skillList[category].map((skill) => (
                   <Col
                     md={3}

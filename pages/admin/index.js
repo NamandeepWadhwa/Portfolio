@@ -60,10 +60,7 @@ const [userLogin, setUser]=useAtom(user);
           <button type="submit" className="btn btn-dark mx-2"  onClick={adminLogin}
            
             >Login</button>
-             <button type="submit" className="btn btn-dark mx-3"
-            onClick={routeChange}
-           
-           >Register</button>
+            
         </form>
         </Col>
     </Row>
